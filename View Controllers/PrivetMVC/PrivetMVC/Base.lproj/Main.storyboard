@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Hello View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HelloViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5XD-Hc-bpD">
+                                <rect key="frame" x="133" y="169" width="148" height="30"/>
+                                <state key="normal" title="Изменить заголовок"/>
+                                <connections>
+                                    <action selector="changeHelloButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tIg-Ij-ECr"/>
+                                    <segue destination="L2w-Ed-o5E" kind="show" identifier="ShowHelloVC" id="FGq-wG-BkI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Привет!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fB-0D-s5L">
+                                <rect key="frame" x="117.5" y="101" width="179" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5XD-Hc-bpD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CE2-ZF-IPZ"/>
+                            <constraint firstItem="9fB-0D-s5L" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="57" id="iQM-0e-I9G"/>
+                            <constraint firstItem="9fB-0D-s5L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kqK-Tp-AeM"/>
+                            <constraint firstItem="5XD-Hc-bpD" firstAttribute="top" secondItem="9fB-0D-s5L" secondAttribute="bottom" constant="8" id="uOZ-rk-4Em"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="helloLabel" destination="9fB-0D-s5L" id="cX5-5U-lFV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="71" y="96"/>
+        </scene>
+        <!--Change View Controller-->
+        <scene sceneID="bKv-BA-peP">
+            <objects>
+                <viewController id="L2w-Ed-o5E" customClass="ChangeViewController" customModule="PrivetMVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5NT-7y-P6e">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hIw-K6-kR0">
+                                <rect key="frame" x="40" y="110" width="334" height="58.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Измените заголовок:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXJ-kS-ir2">
+                                        <rect key="frame" x="0.0" y="0.0" width="170.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Akl-SN-HE1">
+                                        <rect key="frame" x="0.0" y="28.5" width="334" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Akl-SN-HE1" firstAttribute="leading" secondItem="hIw-K6-kR0" secondAttribute="leading" id="NmQ-5T-tDH"/>
+                                    <constraint firstAttribute="trailing" secondItem="Akl-SN-HE1" secondAttribute="trailing" id="TKQ-zB-Fys"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="200" translatesAutoresizingMaskIntoConstraints="NO" id="Yis-XV-Rlz">
+                                <rect key="frame" x="40" y="211" width="334" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMa-nZ-DD1">
+                                        <rect key="frame" x="0.0" y="0.0" width="77" height="30"/>
+                                        <state key="normal" title="Сохранить"/>
+                                        <connections>
+                                            <action selector="saveStateButton:" destination="L2w-Ed-o5E" eventType="touchUpInside" id="K0B-UV-EKx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iV9-Iy-TvB">
+                                        <rect key="frame" x="277" y="0.0" width="57" height="30"/>
+                                        <state key="normal" title="Отмена">
+                                            <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelStateButton:" destination="L2w-Ed-o5E" eventType="touchUpInside" id="Ug0-DT-Apr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Yis-XV-Rlz" firstAttribute="leading" secondItem="RyM-F2-RRx" secondAttribute="leading" constant="40" id="Ug9-Wa-WQK"/>
+                            <constraint firstItem="hIw-K6-kR0" firstAttribute="top" secondItem="RyM-F2-RRx" secondAttribute="top" constant="66" id="Wfq-No-7Yt"/>
+                            <constraint firstItem="hIw-K6-kR0" firstAttribute="leading" secondItem="RyM-F2-RRx" secondAttribute="leading" constant="40" id="bZe-UD-7ro"/>
+                            <constraint firstItem="Yis-XV-Rlz" firstAttribute="top" secondItem="Akl-SN-HE1" secondAttribute="bottom" constant="42.5" id="eQB-k1-zj4"/>
+                            <constraint firstItem="RyM-F2-RRx" firstAttribute="trailing" secondItem="hIw-K6-kR0" secondAttribute="trailing" constant="40" id="rLi-4q-GH7"/>
+                            <constraint firstItem="RyM-F2-RRx" firstAttribute="trailing" secondItem="Yis-XV-Rlz" secondAttribute="trailing" constant="40" id="rWG-HC-AyJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RyM-F2-RRx"/>
+                    </view>
+                    <connections>
+                        <outlet property="changeTextLabel" destination="Akl-SN-HE1" id="pTH-3l-SsU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k9c-Ed-Tj8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="860.86956521739137" y="95.758928571428569"/>
+        </scene>
+    </scenes>
+</document>
